@@ -1,0 +1,119 @@
+/* ----------------------------
+   GLOBAL STYLES & RESET
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ----------------------------
+   HEADER
+----------------------------- */
+.header {
+  text-align: center;
+  padding: 2rem;
+  background: #4caf50;
+  color: white;
+}
+
+/* ----------------------------
+   NAVBAR (Flexbox)
+----------------------------- */
+.navbar ul {
+  display: flex;               /* Flexbox for horizontal nav */
+  justify-content: center;
+  list-style: none;
+  background: #333;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #4caf50;
+}
+
+/* ----------------------------
+   MAIN CONTENT
+----------------------------- */
+.main-content {
+  padding: 2rem;
+}
+
+/* Intro section */
+.intro {
+  margin-bottom: 2rem;
+}
+
+/* ----------------------------
+   GRID SECTION
+----------------------------- */
+.grid-section {
+  display: grid;                      /* CSS Grid */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------
+   FOOTER
+----------------------------- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  margin-top: 2rem;
+}
+
+/* ----------------------------
+   RESPONSIVENESS
+----------------------------- */
+
+/* Medium screens: Tablet */
+@media (max-width: 992px) {
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+  }
+
+  .navbar ul {
+    gap: 1rem;
+  }
+}
+
+/* Small screens: Mobile */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;           /* Stack nav links */
+    align-items: center;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;       /* 1-column grid */
+  }
+
+  .header {
+    padding: 1rem;
+  }
+}
